@@ -29,6 +29,8 @@ public class Order {
     @JoinColumn(name = "delivery_id") //일대일은 주인이 아무나 되도 되는데 가장 정보 많이 들어가는 오더에 포린키설정
     private Delivery delivery;
 
+
+    //order_date
     private LocalDateTime orderDate; //주문시간
 
     @Enumerated(EnumType.STRING)
