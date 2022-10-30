@@ -27,7 +27,7 @@ public class Category {
 
 
     //지혼자 부모 자식 상속관계 설정
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Category parent;
 
