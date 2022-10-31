@@ -22,4 +22,6 @@ public class Member {
 
     @OneToMany(mappedBy = "member")//1대 다 관계, 연관관계에서 주인이 x
     private List<Order> orders = new ArrayList<>();
+
+
 }
