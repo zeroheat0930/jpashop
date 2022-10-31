@@ -1,6 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -10,13 +11,11 @@ import javax.persistence.PersistenceUnit;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext //jpa쓰면 무조껀 써야됨
-    private EntityManager em;
-
-    //@PersistenceUnit
-   //private EntityManagerFactory emf;
+//    @PersistenceContext //jpa쓰면 무조껀 써야됨 //그런데 스프링 부트가 롬복쓸떄 생성자 주입방식으로 해줄수있어서 RequiredArgsConstructor 쓰면됨
+    private final EntityManager em;
 
     public void save(Member member){
         em.persist(member);
