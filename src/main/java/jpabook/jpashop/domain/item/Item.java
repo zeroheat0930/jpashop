@@ -32,6 +32,7 @@ public abstract class Item {
     //비지니스로직//
 
     //재고증가
+
     public void addStock(int quantity){
         this.stockQuantity += quantity;
     }
